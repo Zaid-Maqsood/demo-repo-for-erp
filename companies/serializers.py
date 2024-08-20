@@ -6,6 +6,7 @@ from teams.serializers import TeamSerializer
 from accounts.serializers import UserSerializer
 
 
+# companyserializer
 class CompanySerializer(serializers.ModelSerializer):
     users = UserSerializer(read_only=True, many=True)
     projects = ProjectSerializer(read_only=True, many=True)
